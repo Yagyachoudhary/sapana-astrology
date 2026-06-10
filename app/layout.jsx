@@ -3,9 +3,9 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: 'Sapana — Live Palmistry & Horoscope',
+  title: 'Sapana — Tarot & Numerology',
   description:
-    'Find peace of mind and know yourself better. Palm reading, horoscope, tarot and compatibility consultations with astrologer Sapana.',
+    'Find peace of mind and know yourself better. Tarot, numerology, psychic, face reading, Nadi and life coaching sessions with certified reader Sapana.',
 };
 
 export default function RootLayout({ children }) {

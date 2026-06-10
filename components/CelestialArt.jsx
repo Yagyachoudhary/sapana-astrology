@@ -173,11 +173,53 @@ export function Sparkles({ className = '' }) {
   );
 }
 
+/** All-seeing eye — psychic reading. */
+export function PsychicEye({ className = '' }) {
+  return (
+    <svg viewBox="0 0 140 140" className={className} aria-hidden="true">
+      {Array.from({ length: 12 }, (_, i) => {
+        const a = (i * 30 * Math.PI) / 180;
+        return (
+          <path
+            key={i}
+            {...stroke}
+            d={`M ${70 + Math.cos(a) * 50} ${70 + Math.sin(a) * 50} L ${70 + Math.cos(a) * 60} ${70 + Math.sin(a) * 60}`}
+          />
+        );
+      })}
+      <path {...stroke} strokeWidth="1.3" d="M26 70q44-40 88 0-44 40-88 0Z" />
+      <circle cx="70" cy="70" r="16" {...stroke} />
+      <circle cx="70" cy="70" r="7" {...stroke} />
+      <circle cx="74" cy="66" r="1.5" fill="currentColor" stroke="none" />
+      <path {...stroke} d="M70 28l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5Z" />
+    </svg>
+  );
+}
+
+/** Serene face with moon and stars — face reading. */
+export function FaceReading({ className = '' }) {
+  return (
+    <svg viewBox="0 0 140 140" className={className} aria-hidden="true">
+      <circle cx="70" cy="70" r="58" {...stroke} strokeDasharray="1 6" />
+      <ellipse cx="70" cy="72" rx="32" ry="40" {...stroke} />
+      <path {...stroke} d="M54 64q5-5 11-1M75 63q6-4 11 1" />
+      <path {...stroke} d="M53 60l11-3M76 57l11 3" />
+      <path {...stroke} d="M68 66q-3 10 2 13 3 2 6 0" />
+      <path {...stroke} d="M60 92q10 7 20 0" />
+      <path {...stroke} d="M38 76q-4 14 6 24M102 76q4 14-6 24" />
+      <path {...stroke} d="M104 30l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5Z" />
+      <path {...stroke} d="M34 28a10 10 0 1 0 8 14 8 8 0 0 1-8-14Z" />
+    </svg>
+  );
+}
+
 const icons = {
   palm: PalmIcon,
   zodiac: ZodiacWheel,
   lock: LockAndKey,
   moon: MoonAndStars,
+  eye: PsychicEye,
+  face: FaceReading,
 };
 
 /** Resolve an icon component by key stored in service data. */

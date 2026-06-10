@@ -36,8 +36,8 @@ export default async function HomePage() {
             Find peace of mind and<br className="hidden sm:block" /> know yourself better
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-sm text-cocoa-700 sm:text-base">
-            Palmistry, horoscope, tarot and compatibility readings — time-honored
-            guidance, hand-selected for its power to guide.
+            Tarot, numerology, psychic and face readings — intuitive,
+            compassionate guidance to heal and bring positivity into your life.
           </p>
           <div className="mt-10">
             <Link href="/booking" className="btn-primary">
@@ -55,9 +55,9 @@ export default async function HomePage() {
             Choose a way to know your future
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-cocoa-700 sm:text-base">
-            Simply put, palmistry is the art of analyzing the physical features of
-            the hands to interpret personality characteristics and predict future
-            happenings. Chiromancy analyses are time-honored.
+            From the cards to the numbers in your birth date, every reading is a
+            doorway to self-knowledge. Choose the practice that speaks to your
+            question — each session is personal, intuitive and judgment-free.
           </p>
         </div>
 
@@ -85,7 +85,7 @@ export default async function HomePage() {
       <section id="about" className="bg-cream-50">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-20 sm:px-6 lg:grid-cols-2">
           <div>
-            <p className="eyebrow">About the astrologer</p>
+            <p className="eyebrow">Meet Sapana</p>
             <h2 className="mt-3 text-3xl sm:text-4xl">
               Because we believe it’s time for us to give a second look on what we
               already have in our life
@@ -93,13 +93,28 @@ export default async function HomePage() {
             <p className="mt-6 text-sm leading-relaxed text-cocoa-700 sm:text-base">
               {siteInfo.about}
             </p>
+            <div className="mt-6 flex flex-wrap gap-2">
+              {siteInfo.skills.map((skill) => (
+                <span
+                  key={skill}
+                  className="rounded-full border border-terracotta-400 px-4 py-1.5 text-xs font-medium text-terracotta-600"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link href="/booking" className="btn-primary">Book Consultation</Link>
               <Link href="/contact" className="btn-outline">Get in Touch</Link>
             </div>
           </div>
           <div className="relative mx-auto w-full max-w-md">
-            <SunFace className="w-full text-cocoa-700/80" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={siteInfo.photo}
+              alt="Sapana — certified tarot card reader and numerologist"
+              className="w-full rounded-sm object-cover shadow-lg"
+            />
           </div>
         </div>
       </section>

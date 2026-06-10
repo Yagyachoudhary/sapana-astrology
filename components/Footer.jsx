@@ -8,8 +8,8 @@ export default function Footer() {
         <div>
           <h3 className="text-xl">Sapana</h3>
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-cocoa-700">
-            Live palmistry, horoscope, tarot and compatibility readings —
-            guidance rooted in tradition, delivered with warmth.
+            Certified tarot card reader and numerologist — intuitive readings
+            and life coaching to heal and bring positivity.
           </p>
         </div>
 

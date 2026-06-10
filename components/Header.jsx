@@ -26,7 +26,7 @@ export default function Header() {
             </svg>
           </span>
           <span className="text-sm font-medium leading-tight">
-            Live Palmistry &<br />Horoscope
+            Tarot &<br />Numerology
           </span>
         </Link>
 
