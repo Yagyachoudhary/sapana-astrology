@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-cocoa-800 font-sans antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-block rounded-full bg-terracotta-500 px-8 py-3 text-sm font-medium text-white transition hover:bg-terracotta-600 focus:outline-none focus:ring-2 focus:ring-terracotta-400 focus:ring-offset-2;
+  }
+  .btn-outline {
+    @apply inline-block rounded-full border border-cocoa-800 px-8 py-3 text-sm font-medium text-cocoa-800 transition hover:bg-cocoa-800 hover:text-white;
+  }
+  .link-underline {
+    @apply text-sm font-semibold text-cocoa-900 underline underline-offset-4 decoration-terracotta-500 hover:text-terracotta-600;
+  }
+  .eyebrow {
+    @apply text-sm font-medium tracking-wide text-terracotta-500;
+  }
+}
